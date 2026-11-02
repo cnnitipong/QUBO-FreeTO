@@ -5,8 +5,8 @@ import { STLLoader } from "three/addons/loaders/STLLoader.js";
 // ---------------------------------------------------------------------
 // Base URL. Every request goes through apiUrl(), relative to the directory
 // the page was loaded from, so the app works both at http://localhost:PORT/
-// and behind a reverse proxy under a prefix (https://nitipong.com/qff3d/ ->
-// the Hugging Face Space; the proxy strips the prefix). Never use a leading
+// and behind a reverse proxy under a prefix (https://example.org/app/ ->
+// the app; the proxy strips the prefix). Never use a leading
 // "/" for an app URL.
 // ---------------------------------------------------------------------
 const BASE_PATH = window.location.pathname.replace(/[^/]*$/, "");
@@ -133,7 +133,7 @@ const ROLE_COLORS = {
   load: 0xe07b39,
   keepdom: 0x4caf6e,
 };
-// Viewport / design-mesh constants (nitipong.com palette: off-white paper,
+// Viewport / design-mesh constants (palette: off-white paper,
 // mid-grey design, ink edges).
 const VIEW_COLORS = {
   background: 0xf4f4f2,
@@ -621,7 +621,7 @@ el.addSymmetryBtn.addEventListener("click", () => addSymmetryRow());
 // Uploading
 // ---------------------------------------------------------------------
 // One request per file: keeps every request small, which matters behind the
-// nitipong.com proxy (about 4.5 MB per request; see deploy/vercel/README.md).
+// a proxy that limits the request size (e.g. about 4.5 MB on Vercel).
 async function uploadFiles(fileList) {
   const files = Array.from(fileList);
   if (!files.length) return;
@@ -1761,7 +1761,7 @@ document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("ligh
 // ---------------------------------------------------------------------
 // Chart
 // ---------------------------------------------------------------------
-// nitipong.com palette: ink compliance line, dashed muted-grey volume
+// palette: ink compliance line, dashed muted-grey volume
 // fraction, hairline grid. CHART_COLORS_DARK are the inverted variants for the
 // dark theme. Further series (if ever added) cycle through CHART_SERIES.
 const CHART_COLORS = { compliance: "#141414", volfrac: "#8a8a8a", grid: "rgba(0,0,0,0.08)" };
@@ -1926,12 +1926,12 @@ function applyPublicMode(pub) {
     notice.hidden = false;
   }
   if (upNote) {
-    // behind the nitipong.com proxy (not on the direct *.hf.space address)
-    // every request body is capped at about 4.5 MB by Vercel
+    // behind a Vercel proxy (not on the direct *.hf.space address) every
+    // request body is capped at about 4.5 MB
     const viaProxy = !/\.hf\.space$/i.test(window.location.hostname);
     upNote.textContent =
       `Shared demo server: STL files up to ${pub.max_upload_mb} MB, at most ${pub.max_upload_files} files. ` +
-      (viaProxy ? "Through nitipong.com/qff3d each file is limited to about 4.5 MB. " : "") + largeUploadHint();
+      (viaProxy ? "Through this address each file is limited to about 4.5 MB. " : "") + largeUploadHint();
     upNote.hidden = false;
   }
   clampToPublicLimits();

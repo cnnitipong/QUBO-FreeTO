@@ -1,8 +1,4 @@
-# QFF-3D web app (Quantum Free-Form 3D Topology Optimisation) as a container.
-#
-# Built for a Hugging Face Docker Space (CPU basic, port 7860; see
-# deploy/huggingface/README.md) that https://nitipong.com/qff3d proxies to
-# (deploy/vercel/README.md), but runs anywhere:
+# QFF-3D web app (Quantum Free-Form 3D Topology Optimization) as a container.
 #
 #   docker build -t qff3d .
 #   docker run --rm -p 7860:7860 qff3d          # -> http://localhost:7860/

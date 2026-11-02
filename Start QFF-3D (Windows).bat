@@ -1,9 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
-title QFF-3D - Quantum Free-Form 3D Topology Optimisation
+title QFF-3D - Quantum Free-Form 3D Topology Optimization
 
 REM ============================================================================
-REM Launch the QFF-3D web app (Quantum Free-Form 3D Topology Optimisation,
+REM Launch the QFF-3D web app (Quantum Free-Form 3D Topology Optimization,
 REM built on FreeTO; Python package `freeto`) on Windows.
 REM
 REM  - Finds a real Python 3.10-3.13 interpreter (prefers the "py" launcher;
@@ -149,7 +149,7 @@ REM ----------------------------------------------------------------------
 REM 4. Run.
 REM ----------------------------------------------------------------------
 echo.
-echo Starting QFF-3D web app (Quantum Free-Form 3D Topology Optimisation)...
+echo Starting QFF-3D web app (Quantum Free-Form 3D Topology Optimization)...
 "%VPY%" -m webapp.server --port 8000 --open
 if errorlevel 1 (
   echo.

@@ -19,6 +19,6 @@ Thanks for your interest. Bug reports, questions and pull requests are welcome.
   and explain why.
 - **Style:** plain Python 3.10+, NumPy-style docstrings where helpful, no new heavy dependencies in
   `requirements.txt` without discussion (optional extras go in `requirements-quantum.txt` /
-  `pyproject.toml`). The frontend has no build step; use relative URLs only (the app is also
-  served under `/qff3d/` behind a proxy).
+  `pyproject.toml`). The frontend has no build step; use relative URLs only (the app can be
+  served under a sub-path behind a proxy).
 - **Licence:** contributions are accepted under the MIT licence of this repository.

@@ -1,8 +1,8 @@
 """Public (hosted) mode of the QFF-3D web app.
 
 Off by default, so a local ``python -m webapp.server`` behaves exactly as
-before.  ``QFF3D_PUBLIC=1`` (set by the Dockerfile for the shared Hugging Face
-Space behind https://nitipong.com/qff3d) turns on the limits below, which keep
+before.  ``QFF3D_PUBLIC=1`` (set by the Dockerfile for a shared
+server) turns on the limits below, which keep
 one small shared CPU server usable for everybody.  Every limit can be changed
 with an environment variable; the defaults are in brackets.
 

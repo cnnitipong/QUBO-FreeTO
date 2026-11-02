@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "qff3d"
 version = "1.0.0"
-description = "QFF-3D: Quantum Free-Form 3D Topology Optimisation (FreeTO-Python with QUBO design updates and a web app)"
+description = "QFF-3D: Quantum Free-Form 3D Topology Optimization (FreeTO-Python with QUBO design updates and a web app)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -39,7 +39,6 @@ test = ["pytest>=7", "httpx>=0.24"]
 
 [project.urls]
 Homepage = "https://github.com/cnnitipong/QUBO-FreeTO"
-Demo = "https://nitipong.com/qff3d"
 Issues = "https://github.com/cnnitipong/QUBO-FreeTO/issues"
 
 [project.scripts]

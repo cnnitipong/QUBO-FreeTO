@@ -1,22 +1,19 @@
 cff-version: 1.2.0
-message: >-
-  If you use QFF-3D, please cite the software as below and the accompanying
-  manuscript (preferred citation). NOTE: the manuscript is SUBMITTED to
-  Engineering Structures and not yet published; update this entry when it is.
-title: "QFF-3D: Quantum Free-Form 3D Topology Optimisation"
+message: "If you use QFF-3D, please cite the software and the accompanying manuscript (submitted, not yet published)."
+title: "QFF-3D: Quantum Free-Form 3D Topology Optimization"
 type: software
 version: 1.0.0
-date-released: "2026-10-07"
+date-released: "2026-11-02"
 license: MIT
 repository-code: "https://github.com/cnnitipong/QUBO-FreeTO"
-url: "https://nitipong.com/qff3d"
 authors:
   - family-names: Praphaphankul
     given-names: Nitipong
-    affiliation: Chulalongkorn University
+    email: nitipong.pr@chula.ac.th
+    affiliation: "Center of Excellence in Urban Strategies and Healthy Cities, Faculty of Architecture, Chulalongkorn University"
 keywords:
-  - topology optimisation
-  - QUBO
+  - topology optimization
+  - quadratic unconstrained binary optimization
   - quantum annealing
   - QAOA
   - freeform
@@ -38,14 +35,14 @@ references:
     doi: 10.1016/j.advengsoft.2024.103790
 preferred-citation:
   type: article
-  title: >-
-    QUBO design updates for freeform 3D topology optimisation: a
-    quantum-annealing-compatible formulation benchmarked against MMA
+  title: "Freeform 3D topology optimization with quantum-annealing-ready binary design updates"
   authors:
     - family-names: Praphaphankul
       given-names: Nitipong
-      affiliation: Chulalongkorn University
+      affiliation: "Center of Excellence in Urban Strategies and Healthy Cities, Faculty of Architecture, Chulalongkorn University"
+    - family-names: Khosakitchalert
+      given-names: Chavanont
+      affiliation: "Architectural Intelligence (A.I.) Research Group, Faculty of Architecture, Chulalongkorn University"
   journal: Engineering Structures
   status: submitted
   year: 2026
-  notes: "Submitted manuscript, not yet peer reviewed or published."

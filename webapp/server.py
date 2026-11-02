@@ -10,8 +10,8 @@ downloads and the static frontend.
 
 Hosting: every route lives at the root and the frontend only uses relative
 URLs, so the app works unchanged behind a reverse proxy that serves it under a
-prefix and strips that prefix (e.g. https://nitipong.com/qff3d/ ->
-https://<space>.hf.space/).  QFF3D_ROOT_PATH (or an X-Forwarded-Prefix request
+prefix and strips that prefix (e.g. https://example.org/app/ ->
+http://127.0.0.1:7860/).  QFF3D_ROOT_PATH (or an X-Forwarded-Prefix request
 header) only sets the ASGI root_path, used by FastAPI's /docs page.
 QFF3D_PUBLIC=1 enables the limits of the shared demo server (webapp/public.py).
 """
@@ -1393,7 +1393,7 @@ def create_app(workdir: Optional[Path] = None, public: Optional[PublicConfig] = 
     @app.get("/index.html")
     def index():
         # no-cache: the page is tiny, and a redeploy must not leave browsers
-        # (or the nitipong.com proxy) on an index.html that references old assets
+        # (or a proxy) on an index.html that references old assets
         return FileResponse(str(STATIC_DIR / "index.html"), headers={"Cache-Control": "no-cache"})
 
     return app

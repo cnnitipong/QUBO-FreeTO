@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Double-click launcher for macOS Finder: creates/activates a virtual
 # environment, installs dependencies (only when needed), and starts the
-# QFF-3D web app (Quantum Free-Form 3D Topology Optimisation, built on
+# QFF-3D web app (Quantum Free-Form 3D Topology Optimization, built on
 # FreeTO; Python package `freeto`), opening it in the default browser.
 #
 #  - Finds a real Python 3.10-3.13 interpreter, preferring one of those exact
@@ -121,8 +121,8 @@ fi
 # 4. Run.
 # ---------------------------------------------------------------------
 echo
-printf '\033]0;QFF-3D - Quantum Free-Form 3D Topology Optimisation\007'
-echo "Starting QFF-3D web app (Quantum Free-Form 3D Topology Optimisation)…"
+printf '\033]0;QFF-3D - Quantum Free-Form 3D Topology Optimization\007'
+echo "Starting QFF-3D web app (Quantum Free-Form 3D Topology Optimization)…"
 "$VPY" -m webapp.server --port 8000 --open
 SERVER_EXIT=$?
 

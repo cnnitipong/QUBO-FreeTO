@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Launch the QFF-3D web app (Quantum Free-Form 3D Topology Optimisation,
+# Launch the QFF-3D web app (Quantum Free-Form 3D Topology Optimization,
 # built on FreeTO; Python package `freeto`) on Linux.
 #
 #  - Finds a real Python 3.10-3.13 interpreter, preferring one of those exact
@@ -83,5 +83,5 @@ else
   echo "Dependencies already installed and up to date; skipping install (offline-friendly)."
 fi
 
-echo "Starting QFF-3D web app (Quantum Free-Form 3D Topology Optimisation)…"
+echo "Starting QFF-3D web app (Quantum Free-Form 3D Topology Optimization)…"
 exec "$VPY" -m webapp.server --port 8000 --open "$@"
