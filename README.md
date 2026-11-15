@@ -86,7 +86,7 @@ The browser tests skip themselves when Playwright is not installed.
 Please cite the software ([`CITATION.cff`](CITATION.cff)) and the manuscript (submitted, not yet published):
 
 > N. Praphaphankul, C. Khosakitchalert, "Freeform 3D topology optimization with quantum-annealing-ready
-> binary design updates", submitted to *Engineering Structures* (2026).
+> binary design updates", submitted to *Structures* (2026).
 
 and FreeTO: O. Ibhadode, Y.-F. Fu, A. Qureshi, "FreeTO - Freeform 3D topology optimization using a structured
 mesh with smooth boundaries in Matlab", *Advances in Engineering Software* 198 (2024) 103790,
